@@ -1,9 +1,18 @@
+import React, { useState } from 'react';
+import { HashRouter, Routes, Route, Navigate} from 'react-router-dom';
+import NavBar from './components/NavBar.jsx'
+import About from './pages/About.jsx'
+
+
 
 function App() {
   return (
-    <div>
-      <h1 className="text-7xl text-center text-blue-400">Antek Grajek</h1>
-    </div>
+   <HashRouter>
+    <NavBar/>
+      <Routes>
+        <Route path="/about" element ={<About />} />
+      </Routes>
+   </HashRouter>
   );
 }
 
